@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catalog — BIG W. GARAGE CO.</title>
+<meta name="description" content="Browse the full Big W. Garage Co. catalog — apparel, headwear, accessories and collectibles, sortable by price and scarcity.">
+<meta name="theme-color" content="#170B1F">
+<meta property="og:title" content="Catalog — BIG W. GARAGE CO.">
+<meta property="og:description" content="Browse the full Big W. Garage Co. catalog.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;800;900&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="power-meter" id="powerMeter" aria-hidden="true"></div>
+
+<div class="marquee" role="note" aria-label="Store announcements">
+  <div class="marquee-track">
+    <span>FREE SHIPPING OVER $75</span><span>·</span>
+    <span>GARLIC ENGINE COLLECTION — LIVE NOW</span><span>·</span>
+    <span>RESTOCKS DROP FRIDAYS, 9AM — TAKE IT BEFORE IT'S GONE</span><span>·</span>
+    <span>FREE SHIPPING OVER $75</span><span>·</span>
+    <span>GARLIC ENGINE COLLECTION — LIVE NOW</span><span>·</span>
+  </div>
+</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark" aria-hidden="true">●</span>
+      BIG W. GARAGE CO.
+    </a>
+    <nav class="primary-nav" aria-label="Primary">
+      <a href="catalog.html" aria-current="page">Catalog</a>
+      <a href="about.html">About</a>
+      <a href="index.html#restock">Restock</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" aria-label="Search the catalog">⌕</button>
+      <button class="icon-btn cart-btn" id="cartBtn" aria-label="Cart, 0 items">
+        ▥<span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile" hidden style="display: none;">
+  <a href="catalog.html">Catalog</a>
+  <a href="about.html">About</a>
+  <a href="index.html#restock">Restock</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<main id="main">
+
+  <section class="page-hero">
+    <p class="breadcrumb"><a href="index.html">Home</a> / Catalog</p>
+    <p class="eyebrow">FULL INVENTORY</p>
+    <h1 class="section-title">The Garage Catalog</h1>
+    <p class="page-sub">
+      Every active piece, every world, no teaser cuts. Filter by category,
+      sort by price or by how close it is to selling out.
+    </p>
+  </section>
+
+  <section class="catalog" aria-labelledby="catalog-heading">
+    <h2 id="catalog-heading" class="visually-hidden">Product catalog</h2>
+
+    <div class="world-tabs" id="worldTabs" role="tablist" aria-label="Filter by world">
+      <button class="world-tab active" data-world="all" role="tab" aria-selected="true">All Worlds</button>
+      <button class="world-tab" data-world="apparel" role="tab" aria-selected="false">Apparel</button>
+      <button class="world-tab" data-world="headwear" role="tab" aria-selected="false">Headwear</button>
+      <button class="world-tab" data-world="accessories" role="tab" aria-selected="false">Accessories</button>
+      <button class="world-tab" data-world="collectibles" role="tab" aria-selected="false">Collectibles</button>
+    </div>
+
+    <div class="catalog-controls">
+      <p class="results-count" id="resultsCount">12 items</p>
+      <div class="sort-control">
+        <label for="sortSelect">Sort</label>
+        <select id="sortSelect">
+          <option value="featured">Featured</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="scarce">Most Scarce</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="product-grid" id="productGrid"><!-- injected by script.js --></div>
+  </section>
+
+  <section style="background:var(--ink);color:var(--paper);text-align:center;">
+    <p class="eyebrow" style="color:var(--coin);">CAN'T DECIDE</p>
+    <h2 class="section-title" style="color:var(--paper);">Start With The Bomber</h2>
+    <p class="body-text" style="color:#cdc2db;max-width:46ch;margin:18px auto 32px;">
+      It's the piece that sells out first every drop. See sizing, fabric weight
+      and the full story behind it.
+    </p>
+    <a href="product.html" class="btn btn-primary">View Garlic Engine Bomber</a>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark" aria-hidden="true">●</span>
+      <p>BIG W. GARAGE CO.<br><span>Gear for people who take it all.</span></p>
+    </div>
+    <div class="footer-cols">
+      <div>
+        <h3>Shop</h3>
+        <a href="catalog.html">Apparel</a>
+        <a href="catalog.html">Headwear</a>
+        <a href="catalog.html">Collectibles</a>
+      </div>
+      <div>
+        <h3>Store</h3>
+        <a href="about.html">About</a>
+        <a href="index.html#restock">Restock Alerts</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Follow</h3>
+        <a href="#">Instagram</a>
+        <a href="#">Discord</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Big W. Garage Co. Fan-run parody project, independently operated, not affiliated with any publisher.</p>
+  </div>
+</footer>
+
+<div class="mobile-cart-bar" aria-hidden="true">
+  <span>CART</span>
+  <span id="mobileCartCount">0 items</span>
+</div>
+<div class="toast" id="cartToast" role="status" aria-live="polite"></div>
+
+<script src="game.js"></script>
+</body>
+</html>
