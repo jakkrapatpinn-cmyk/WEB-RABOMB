@@ -492,6 +492,9 @@ section{padding:100px 28px;}
 .footer-bottom{max-width:1280px;margin:0 auto;padding:22px 0;text-align:center;}
 .footer-bottom p{font-family:var(--mono);font-size:.7rem;color:#7c7868;}
 
+/* ensure [hidden] always wins regardless of display rules */
+[hidden] { display: none !important; }
+
 /* =================== CART DRAWER =================== */
 .cart-backdrop {
   position: fixed;
@@ -554,19 +557,32 @@ section{padding:100px 28px;}
 }
 .cart-close {
   width: 36px; height: 36px;
-  border: 2px solid rgba(255,255,255,.15);
+  border: 2px solid rgba(255,255,255,.2);
   border-radius: 50%;
-  color: var(--paper);
-  font-size: .9rem;
+  background: transparent;
+  position: relative;
   display: flex; align-items: center; justify-content: center;
-  transition: border-color .2s var(--ease), background .2s var(--ease), transform .25s var(--jump);
+  transition: border-color .2s var(--ease), background .2s var(--ease), transform .3s var(--jump);
   flex-shrink: 0;
 }
+.cart-close::before,
+.cart-close::after {
+  content: '';
+  position: absolute;
+  width: 14px; height: 2px;
+  background: var(--paper);
+  border-radius: 2px;
+  transition: background .2s var(--ease);
+}
+.cart-close::before { transform: rotate(45deg); }
+.cart-close::after  { transform: rotate(-45deg); }
 .cart-close:hover {
   border-color: var(--brick);
   background: var(--brick);
   transform: rotate(90deg);
 }
+.cart-close:hover::before,
+.cart-close:hover::after { background: var(--paper); }
 
 .cart-items {
   flex: 1;
